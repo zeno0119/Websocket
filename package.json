@@ -1,0 +1,29 @@
+{
+  "name": "websockets-vanilla",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.2.0"
+  },
+  "description": "This example accompanies the\r [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)\r tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "1.2.1",
+    "express": "^4.13.4",
+    "utf-8-validate": "1.2.1",
+    "ws": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heroku-examples/node-websockets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heroku-examples/node-websockets/issues"
+  },
+  "homepage": "https://github.com/heroku-examples/node-websockets#readme"
+}
