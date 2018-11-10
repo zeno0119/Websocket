@@ -3,7 +3,7 @@
 const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
-var fs = require('file-system');
+var fs = require("fs");
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
