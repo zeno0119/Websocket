@@ -15,6 +15,9 @@ const wss = new SocketServer({ server });
 
 wss.on('connection', function(ws){
   console.log('Client connected');
+  ws.on('message',function(event){
+    console.log(event);
+  });
   ws.on('close', function(){
     console.log('Client disconnected')
   });
