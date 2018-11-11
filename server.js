@@ -31,6 +31,10 @@ var format = {
 wss.on('connection', function(ws){
   console.log('Client connected');
   ws.on('message',function(event){
+    JSON.parse(event);
+    if(event.objective == "cordinate"){
+      console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
+    } 
   });
   ws.on('close', function(){
     console.log('Client disconnected');
