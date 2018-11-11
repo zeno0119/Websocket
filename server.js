@@ -33,7 +33,7 @@ wss.on('connection', function(ws){
   ws.on('message',function(Event){
     var event = JSON.parse(Event);
     if(event.objective == "cordinate"){
-      date = new Date();
+      var date = new Date();
       event.object -= date;
       console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
       ws.send(Event);
