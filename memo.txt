@@ -1,0 +1,32 @@
+扱うデータの書式を統一したい
+WebSocket通信用
+JSON 汎用json
+{
+    "room":{
+        "id":
+        "seed":
+    }
+    "object":送信元のオブジェクト
+    "objective":目的
+    "cordinate"{座標データ
+        "x"
+        "y"
+        "z"
+    }
+}
+JSON ルーム用json
+{
+    "room":{
+        [{"id":名前
+          "seed":乱数のシード値
+        }
+
+        ]
+    }
+}
+
+objectiveについて
+cordinate VRの座標データの送受信
+roomreq ルーム一覧の取得願い
+roomres ルーム一覧の返信
+obstacle 障害物の座標データの送受信
