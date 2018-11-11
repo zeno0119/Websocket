@@ -30,10 +30,13 @@ var format = {
 
 wss.on('connection', function(ws){
   console.log('Client connected');
-  ws.on('message',function(event){
-    event = JSON.parse(event);
+  ws.on('message',function(Event){
+    event = JSON.parse(Event);
     if(event.objective == "cordinate"){
+      date = new Date();
+      event.object -= date;
       console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
+      ws.send(Event);
     }
   });
   ws.on('close', function(){
