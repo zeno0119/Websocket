@@ -14,15 +14,26 @@ const server = express()
 
 const wss = new SocketServer({ server });
 
+var format = {
+  "room":{
+      "id":null,
+      "seed":null
+  },
+  "object":null,
+  "objective":null,
+  "cordinate":{
+      "x":null,
+      "y":null,
+      "z":null
+  }
+};
+
 wss.on('connection', function(ws){
   console.log('Client connected');
   ws.on('message',function(event){
-    if(event.indexOf("cordinate") != -1){
-      console.log(event.replace("cordinate,",""));
-    }
   });
   ws.on('close', function(){
-    console.log('Client disconnected')
+    console.log('Client disconnected');
   });
 });
 
