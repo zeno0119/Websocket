@@ -32,6 +32,9 @@ wss.on('connection', function(ws){
   console.log('Client connected');
   ws.on('message',function(event){
     JSON.parse(event);
+    console.log(event);
+    console.log(event.cordinate);
+    console.log(event.objective);
     if(event.objective == "cordinate"){
       console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
     } 
