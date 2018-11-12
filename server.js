@@ -36,6 +36,7 @@ wss.on('connection', function(ws){
       var date = new Date();
       event.object -= date;
       console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
+      Event = JSON.stringify(event);
       ws.send(Event);
     }
   });
