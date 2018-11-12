@@ -34,7 +34,7 @@ wss.on('connection', function(ws){
     var event = JSON.parse(Event);
     if(event.objective == "cordinate"){
       var date = new Date();
-      console.log(event.objective);
+      console.log(event.object);
       event.object -= date;
       //console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
       Event = JSON.stringify(event);
