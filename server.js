@@ -33,7 +33,7 @@ wss.on('connection', function(ws){
   console.log('Client connected');
   ws.on('message',function(Event){
     var event = JSON.parse(Event);
-    console.log(event.objective);
+    console.log(event);
     ws.send(Event);
   });
   ws.on('close', function(){
