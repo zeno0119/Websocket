@@ -27,6 +27,4 @@ JSON ルーム用json
 
 objectiveについて
 cordinate VRの座標データの送受信
-roomreq ルーム一覧の取得願い
-roomres ルーム一覧の返信
 obstacle 障害物の座標データの送受信
