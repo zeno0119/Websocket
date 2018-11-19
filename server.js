@@ -40,9 +40,3 @@ wss.on('connection', function(ws){
     console.log('Client disconnected');
   });
 });
-
-setInterval(function(){
-  wss.clients.forEach(function(client){
-    client.send(new Date().toTimeString());
-  });
-}, 1000);
