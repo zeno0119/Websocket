@@ -3,8 +3,6 @@
 const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
-var fs = require("fs");
-var activeUser = [false];
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
@@ -16,16 +14,17 @@ const server = express()
 const wss = new SocketServer({ server });
 
 var format = {
-  "room":{
-      "id":null,
-      "seed":null
-  },
   "object":null,
   "objective":null,
   "cordinate":{
       "x":null,
       "y":null,
       "z":null
+  },
+  "rotation":{
+    "x":null,
+    "y":null,
+    "z":null
   }
 };
 
