@@ -31,7 +31,7 @@ var format = {
 wss.on('connection', function(ws){
   console.log('Client connected');
   ws.on('message',function(Event){
-    event = JSON.parse(Event);
+    var event = JSON.parse(Event);
     ws.send(Event);
     sendmessage(Event);
     console.log(event);
