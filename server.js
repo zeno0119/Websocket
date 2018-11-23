@@ -30,12 +30,10 @@ var format = {
 
 wss.on('connection', function(ws){
   console.log('Client connected');
-  var userID = parseInt(webSocket.upgradeReq.url.substr(1),10);
-  webSockets[userID] = webSocket;
   ws.on('message',function(Event){
-    event = JSON.parse(event);
+    event = JSON.parse(Event);
     ws.send(Event);
-    ws.clients.send(Event);
+    ws.clients.forEach.send(Event);
     console.log(event);
     console.log(event.cordinate);
     console.log(event.objective);
