@@ -33,7 +33,7 @@ wss.on('connection', function(ws){
   ws.on('message',function(Event){
     event = JSON.parse(Event);
     ws.send(Event);
-    ws.clients.forEach.send(Event);
+    sendmessage(Event);
     console.log(event);
     console.log(event.cordinate);
     console.log(event.objective);
@@ -51,3 +51,9 @@ setInterval(function(){
     client.send(new Date().toTimeString());
   });
 }, 1000);
+
+function sendmessage(message){
+  wss.clients.forEach(function(client){
+    client.send(message);
+  });
+}
