@@ -40,7 +40,7 @@ wss.on('connection', function(ws){
         sendmessage(Event);
         number = 0;
       }
-    }else if(event.objectibe == "ready"){
+    }else if(event.objective == "ready"){
       Number = event.object;
       number = 0;
     }else{
