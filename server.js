@@ -38,9 +38,11 @@ wss.on('connection', function(ws){
       number++;
       if(number == Number){
         sendmessage(Event);
+        number = 0;
       }
     }else if(event.objectibe == "ready"){
-      Number =  event.object;
+      Number = event.object;
+      number = 0;
     }else{
       ws.send(Event);
       sendmessage(Event);
