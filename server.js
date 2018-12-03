@@ -47,8 +47,6 @@ wss.on('connection', function(ws){
       ws.send(Event);
       sendmessage(Event);
       console.log(event);
-      console.log(event.cordinate);
-      console.log(event.objective);
       if(event.objective == "cordinate"){
         console.log(event.cordinate.x + "," + event.cordinate.y + "," + event.cordinate.z);
       } 
